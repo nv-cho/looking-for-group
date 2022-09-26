@@ -27,12 +27,12 @@ const TeamCard = ({ team, userData }) => {
 
 	const applyTeamHandler = () => {
 		OffChainJoinTeam(userData.address, team.id)
-			.then((response) => {
-				toastSetter('Succesfully applied.', 'warning')
-			})
-			.catch((error) => {
-				toastSetter('Something went wrong.', 'error')
-			})
+			// .then((response) => {
+			// 	toastSetter('Succesfully applied.', 'warning')
+			// })
+			// .catch((error) => {
+			// 	toastSetter('Something went wrong.', 'error')
+			// })
 	}
 
 	const orbs = [
