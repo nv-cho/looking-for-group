@@ -98,6 +98,26 @@ export const OffChainJoinTeam = async (address, teamId) => {
 	return data
 }
 
+export const OffChainApplyTeam = async (address, code) => {
+	const url = `${NEXT_PUBLIC_BASE_URL}/teams/apply`
+
+	const payload = {
+		address: address,
+		code: code,
+	}
+
+	const response = await fetch(url, {
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		method: 'POST',
+		body: JSON.stringify(payload),
+	})
+	const data = await response.json()
+
+	return data
+}
+
 /* --------------- API calls for user things --------------- */
 
 export const OffChainModifyUserData = async (userAddress, newInformation) => {

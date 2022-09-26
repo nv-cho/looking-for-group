@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Tooltip } from '@nextui-org/react'
 
-import { OffChainJoinTeam } from '../../pages/api/offChain/post'
+import { OffChainApplyTeam } from '../../pages/api/offChain/post'
 import { truncAddress } from '../../utils/truncAddress'
 
 import { ToastContainer } from 'react-toastify'
@@ -26,7 +26,7 @@ const TeamCard = ({ team, userData }) => {
 	// 3 -> BAD
 
 	const applyTeamHandler = () => {
-		OffChainJoinTeam(userData.address, team.id)
+		OffChainApplyTeam(userData.address, team.id)
 			// .then((response) => {
 			// 	toastSetter('Succesfully applied.', 'warning')
 			// })
